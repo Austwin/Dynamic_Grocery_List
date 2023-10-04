@@ -1,8 +1,0 @@
-- Add user account functionality
-  - add create user page
-  - add user account page
-  - add admin functionality
-  - pages need to render differently depending on users role
-
-- Style website
-- Add item category field (food, tolietries, etc.)
