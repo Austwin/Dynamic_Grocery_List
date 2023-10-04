@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 List: #{list.list_name}
+
+  p #[strong Date Created:] #{list.date_created_formatted}
+  p #[strong Created by:] #{list.created_by}
+
+  if list.items.length != 0
+    p #[strong Items in #{list.list_name}: ]
+      each item in list_items
+        ul 
+          li 
+            a(href=list.id+"/item/"+item._id) #{item.item_name}
+
+  hr
+  p
+    a(href=list.url+'/addItem') Add item
+  p 
+    a(href=list.url+"/clear") Clear list
+  p
+    a(href=list.url+'/delete') Delete list
+  p
+    a(href=list.url+'/update') Update list

@@ -1,0 +1,14 @@
+Users
+    first name
+    last name
+    username
+    password
+    lists
+
+Lists
+    list name
+    date created
+    items
+    Users
+
+

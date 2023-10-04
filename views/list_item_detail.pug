@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 #{title} 
+
+  hr
+  p
+    a(href="/catalog/list/"+list.id+"/item/"+item.id+'/delete') Delete item
+  p
+    a(href=list.url+item.url+'/update') Update item

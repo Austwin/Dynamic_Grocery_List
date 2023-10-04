@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 #{title}: #{list.name}
+
+  p Do you really want to delete this List?
+
+  form(method='POST' action='')
+      div.form-group
+      input#listid.form-control(type='hidden',name='listid', required='true', value=list._id )
+
+      button.btn.btn-primary(type='submit') Delete

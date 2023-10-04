@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Item: #{item.item_name}
+
+  hr
+  p
+    a(href=item.url+'/delete') Delete item
+  p
+    a(href=item.url+'/update') Update item

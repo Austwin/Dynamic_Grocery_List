@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 #{title}
+  
+  if title == 'Create List'
+    form(method='POST' action='')
+      div.form-group
+        label(for='list_name') Name:
+        input#list_name.form-control(type='text', placeholder='Groceries, school supplies, etc.' name='list_name' value=(undefined===list ? '' : list.list_name))
+        label(for='created_by') Created by:
+        input#created_by.form-control(type='text', placeholder='Your name' name='created_by' value=(undefined===list ? '' : list.created_by))
+      button.btn.btn-primary(type='submit') Submit
+  else 
+    form(method='POST' action='')
+      div.form-group
+        label(for='list_name') Name:
+        input#list_name.form-control(type='text', placeholder='Groceries, school supplies, etc.' name='list_name' value=(undefined===list ? '' : list.list_name))
+        label(for='created_by') Created by:
+        input#created_by.form-control(type='text', placeholder='Your name' name='created_by' value=(undefined===list ? '' : list.created_by))
+      button.btn.btn-primary(type='submit') Submit
+  if errors
+   ul
+    for error in errors
+     li!= error.msg
