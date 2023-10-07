@@ -4,7 +4,8 @@ const express = require('express');
 // Set up mongoose connection
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const mongoDB = "mongodb+srv://austsethw:Halo767900!!@awcluster.tjav0jd.mongodb.net/DGLDB?retryWrites=true&w=majority";
+const mongoDBURI = "mongodb+srv://austsethw:Halo767900!!@awcluster.tjav0jd.mongodb.net/DGLDB?retryWrites=true&w=majority";
+const mongoDB = process.env.MONGODB_URI || mongoDBURI;
 
 main().catch((err) => console.log(err));
 async function main() {
